@@ -2,7 +2,7 @@
 FROM node:18 AS builder
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci
+RUN npm install --production --silent
 COPY . .
 
 # Stage 2: Runtime
